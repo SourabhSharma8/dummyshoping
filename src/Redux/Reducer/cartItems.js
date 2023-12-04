@@ -11,12 +11,6 @@ const ProductsReducer = (state = intialState, action) => {
         cartitems: [...state.cartitems, action.payload],
       };
 
-    case "REMOVE_CART_ITEM":
-      return {
-        ...state,
-        cartitems: [...action.payload],
-      };
-
     case "SAVE_ORDER":
       return {
         ...state,

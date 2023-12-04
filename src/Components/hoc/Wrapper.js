@@ -1,8 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "../header";
 
-
-
 const Wrapper = () => {
   return (
     <>
@@ -10,9 +8,7 @@ const Wrapper = () => {
       <main>
         <Outlet />
       </main>
-      
     </>
   );
 };
 export default Wrapper;
-

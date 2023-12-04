@@ -7,10 +7,11 @@ export const SaveProductAction=(payload)=>{
 }
 
 
-export const RemoveFromCart = (updatedCart) => {
+export const RemoveFromCart = (payload) => {
+    
     return {
       type: "REMOVE_FROM_CART",
-      payload: updatedCart,
+      payload,
     };
   };
 

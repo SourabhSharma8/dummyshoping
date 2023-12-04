@@ -4,13 +4,13 @@ import { SaveOrderAction } from "../../../Redux/Actions/Order";
 import { useNavigate } from "react-router-dom";
 
 const PersonalDetails = ({ orderData, total }) => {
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
-    const {
-        handleSubmit,
-        control,
-        formState: { errors },
-      } = useForm();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
     const payload = {
@@ -20,11 +20,9 @@ const PersonalDetails = ({ orderData, total }) => {
       total: total,
       orderData,
     };
-    dispatch(SaveOrderAction(payload))
-    navigate("/review")
-
+    dispatch(SaveOrderAction(payload));
+    navigate("/review");
   };
- 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -33,7 +31,13 @@ const PersonalDetails = ({ orderData, total }) => {
           name="fname"
           rules={{ required: true }}
           control={control}
-          render={({ field }) => <input className="form-control" placeholder="Enter first name" {...field} />}
+          render={({ field }) => (
+            <input
+              className="form-control"
+              placeholder="Enter first name"
+              {...field}
+            />
+          )}
         />
         {errors?.fname && <p className="text-danger">Please fill the field</p>}
       </div>
@@ -43,7 +47,13 @@ const PersonalDetails = ({ orderData, total }) => {
           name="lname"
           rules={{ required: true }}
           control={control}
-          render={({ field }) => <input className="form-control" placeholder="Enter last name" {...field} />}
+          render={({ field }) => (
+            <input
+              className="form-control"
+              placeholder="Enter last name"
+              {...field}
+            />
+          )}
         />
         {errors?.lname && <p className="text-danger">Please fill the field</p>}
       </div>
@@ -53,7 +63,14 @@ const PersonalDetails = ({ orderData, total }) => {
           name="email"
           rules={{ required: true }}
           control={control}
-          render={({ field }) => <input type="email" className="form-control" placeholder="Enter email" {...field} />}
+          render={({ field }) => (
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              {...field}
+            />
+          )}
         />
         {errors?.email && <p className="text-danger">Please fill the field</p>}
       </div>
@@ -63,7 +80,14 @@ const PersonalDetails = ({ orderData, total }) => {
           name="phone"
           rules={{ required: true }}
           control={control}
-          render={({ field }) => <input type="number" className="form-control" placeholder="Enter phone" {...field} />}
+          render={({ field }) => (
+            <input
+              type="number"
+              className="form-control"
+              placeholder="Enter phone"
+              {...field}
+            />
+          )}
         />
         {errors?.phone && <p className="text-danger">Please fill the field</p>}
       </div>

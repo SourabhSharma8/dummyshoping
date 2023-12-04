@@ -23,12 +23,12 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto text-white">
             <li className="nav-item ">
-              <Link className="nav-link text-white" to={"/"}  >
+              <Link className="nav-link text-white" to={"/"}>
                 PRODUCTS
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to={"checkout"} >
+              <Link className="nav-link text-white" to={"checkout"}>
                 CHECKOUT
               </Link>
             </li>

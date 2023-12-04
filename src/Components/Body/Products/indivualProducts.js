@@ -26,7 +26,11 @@ const IndivualProduct = ({ item, AddToCart }) => {
             <p className="card-text">{detail}</p>
             <p className="card-text">{price}</p>
 
-            <button disabled={isProductInCart} onClick={buyAction} className="btn btn-primary">
+            <button
+              disabled={isProductInCart}
+              onClick={buyAction}
+              className="btn btn-primary"
+            >
               Buy
             </button>
           </div>
